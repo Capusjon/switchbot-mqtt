@@ -144,12 +144,13 @@ switch:
   # http://materialdesignicons.com/
   icon: mdi:light-switch
 
-cover:
-- platform: mqtt
-  name: switchbot_curtains
-  command_topic: homeassistant/cover/switchbot-curtain/11:22:33:44:55:66/set
-  set_position_topic: homeassistant/cover/switchbot-curtain/aa:bb:cc:dd:ee:ff/position/set-percent
-  state_topic: homeassistant/cover/switchbot-curtain/11:22:33:44:55:66/state
+mqtt:
+  cover:
+    name: switchbot_curtain
+    command_topic: homeassistant/cover/switchbot-curtain/11:22:33:44:55:66/set
+    position_topic: homeassistant/cover/switchbot-curtain/11:22:33:44:55:66/position
+    set_position_topic: homeassistant/cover/switchbot-curtain/11:22:33:44:55:66/position/set-percent
+    state_topic: homeassistant/cover/switchbot-curtain/11:22:33:44:55:66/state
 ```
 
 ## Docker 🐳
